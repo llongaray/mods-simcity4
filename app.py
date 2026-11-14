@@ -167,11 +167,27 @@ def scan(root: Path | None) -> tuple[list[dict], list[dict]]:
                     continue
     mods: list[dict] = []
     for item in CATALOG:
-        match = [p for p in inventory if not (p["kind"] == "jogo") and mod_matches(p["name"], item)]
-        managed = item["id"] in known
+        match = [p for p in inventory if p["kind"] != "jogo" and mod_matches(p["name"], item)]
+        record = known.get(item["id"])
+        managed = bool(record)
+        integrity = "externo"
+        if managed and root:
+            checks = []
+            for entry in record.get("files", []):
+                try:
+                    file_path = safe_target(root, entry["path"])
+                    checks.append("ausente" if not file_path.is_file() else
+                                  ("verificado" if sha256(file_path) == entry["sha256"] else "alterado"))
+                except (OSError, ValueError, KeyError):
+                    checks.append("alterado")
+            integrity = ("ausente" if "ausente" in checks else
+                         "alterado" if "alterado" in checks or not checks else "verificado")
+        elif managed:
+            integrity = "jogo não localizado"
         mods.append({
-            **item, "installed": bool(match) or managed,
+            **item, "installed": bool(match),
             "managed": managed,
+            "integrity": integrity,
             "files": [p["name"] for p in match],
             "detected": bool(match),
             "auto_available": bool(item.get("direct_url")) and not item.get("complex"),
