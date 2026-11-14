@@ -1,0 +1,267 @@
+[
+  {
+    "id": "akar",
+    "name": "Project Akar — UI Enhancement",
+    "category": "Interface",
+    "popularity": 99,
+    "level": "atenção",
+    "tags": [
+      "Akar",
+      "menus",
+      "offline"
+    ],
+    "patterns": [
+      "akar"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29715-project-akar-ui-enhancement/",
+    "description": "Menus e submenus organizados para conteúdo personalizado.",
+    "warning": "Offline. Não combine com BoC, UDoN Addon ou Bridge and Tunnel incompatíveis. Leia o README do autor.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "udon",
+    "name": "UDoN — ruas de mão única",
+    "category": "Transporte",
+    "popularity": 95,
+    "level": "atenção",
+    "tags": [
+      "rodovias",
+      "one-way",
+      "offline"
+    ],
+    "patterns": [
+      "udon",
+      "unidirectional"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29585-offline-only-mod-unidirectional-networks-udon/",
+    "description": "Vias de mão única, rodovias e opções elevadas.",
+    "warning": "Somente offline; escolha a versão compatível com seus outros mods de ruas.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "orion",
+    "name": "Project Orion — limites 3K",
+    "category": "Expansão",
+    "popularity": 94,
+    "level": "alto",
+    "tags": [
+      "mapa",
+      "limites",
+      "offline"
+    ],
+    "patterns": [
+      "project_orion",
+      "extended_boundary"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29650-project-orion-3k-extended-boundary/",
+    "description": "Permite projetar além dos limites originais da cidade.",
+    "warning": "Instável e pode exigir um conjunto de complementos. O guia comunitário 2025+ desaconselha seu uso.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "orionbelt",
+    "name": "Orion's Belt — pacote de mapas",
+    "category": "Pacotes",
+    "popularity": 91,
+    "level": "alto",
+    "tags": [
+      "mapas",
+      "modpack"
+    ],
+    "patterns": [
+      "orions_belt",
+      "orion_belt"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29989-orions-belt-modpack-bigger-cities-made-easy/",
+    "description": "Coleção de ferramentas e extensões de áreas, com instalador próprio.",
+    "warning": "Pacote com instalador e várias dependências: não importar automaticamente o executável. Consulte instruções do autor.",
+    "install_to": "SimCityData",
+    "complex": true
+  },
+  {
+    "id": "workerdata",
+    "name": "Extended Worker Data",
+    "category": "Interface",
+    "popularity": 90,
+    "level": "baixo",
+    "tags": [
+      "dados",
+      "empregos"
+    ],
+    "patterns": [
+      "extended_worker",
+      "worker_data",
+      "extendedworker"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29419-the-extended-worker-data-mod/",
+    "description": "Indicadores mais detalhados de trabalhadores e vagas nos edifícios.",
+    "warning": "Alguns mods de tráfego exigem variantes específicas para esta interface.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "newrci",
+    "name": "New RCI 1.1",
+    "category": "Simulação",
+    "popularity": 89,
+    "level": "alto",
+    "tags": [
+      "residencial",
+      "comércio",
+      "indústria"
+    ],
+    "patterns": [
+      "new_rci",
+      "newrci",
+      "more_workers_shoppers"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29902-new-rci-11-more-workers-shoppers-and-freights/",
+    "description": "Altera trabalhadores, compradores, carga e balanço urbano.",
+    "warning": "Impacta a simulação e pode exigir nova região. Há relatos de incompatibilidade.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "coast",
+    "name": "Coastline & Waterways Tools",
+    "category": "Transporte",
+    "popularity": 85,
+    "level": "atenção",
+    "tags": [
+      "portos",
+      "água",
+      "offline"
+    ],
+    "patterns": [
+      "coastline",
+      "waterways"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29591-offline-only-mod-%E2%80%9Ccoastline-waterways-tools%E2%80%9D/",
+    "description": "Ferramentas de costa, canais e caminhos para portos.",
+    "warning": "Offline. Guarde backup das cidades; algumas mudanças em vias não são facilmente revertidas.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "camera",
+    "name": "Danny's Camera Mod Pack",
+    "category": "Visual",
+    "popularity": 84,
+    "level": "baixo",
+    "tags": [
+      "zoom",
+      "câmera"
+    ],
+    "patterns": [
+      "cammod",
+      "no_tiltshift",
+      "iso_cam",
+      "danny_camera"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29444-dannys-camera-mod-pack/",
+    "description": "Várias câmeras, perspectivas e níveis extras de zoom.",
+    "warning": "Escolha UMA variante de câmera por vez. Desative a câmera de planejamento.",
+    "install_to": "SimCityData",
+    "single_variant": true
+  },
+  {
+    "id": "subway",
+    "name": "MagLev as Subway",
+    "category": "Transporte",
+    "popularity": 82,
+    "level": "atenção",
+    "tags": [
+      "metrô",
+      "CoT",
+      "offline"
+    ],
+    "patterns": [
+      "maglevassubway",
+      "maglev_as_subway",
+      "maglevsubway"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29428-maglev-as-subway/",
+    "description": "Reaproveita MagLev como rede de metrô subterrânea.",
+    "warning": "Exige a expansão Cities of Tomorrow. Somente offline.",
+    "install_to": "SimCityData",
+    "cot": true
+  },
+  {
+    "id": "clumping",
+    "name": "No Agent Clumping",
+    "category": "Correções",
+    "popularity": 79,
+    "level": "baixo",
+    "tags": [
+      "trânsito",
+      "correção"
+    ],
+    "patterns": [
+      "agentclumping",
+      "agent_clumping",
+      "astadiumtrafficfix",
+      "acollegtrafficfix",
+      "acollegetrafficfix",
+      "auniversitytrafficfix"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29572-no-agent-clumping/",
+    "description": "Reduz congestionamento de agentes em entradas de prédios.",
+    "warning": "Há variantes com e sem integração ao Extended Worker Data; não instale ambas.",
+    "install_to": "SimCityData",
+    "complex": true
+  },
+  {
+    "id": "trees",
+    "name": "Tree Anywhere",
+    "category": "Visual",
+    "popularity": 78,
+    "level": "baixo",
+    "tags": [
+      "árvores",
+      "decoração"
+    ],
+    "patterns": [
+      "treeanywhere",
+      "tree_anywhere"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29203-tree-anywhere/",
+    "description": "Permite plantar árvores em mais lugares da cidade.",
+    "warning": "Confira se a variante do arquivo funciona com seu build.",
+    "install_to": "SimCityData"
+  },
+  {
+    "id": "twinzens",
+    "name": "Twinzens — 2020 Mod Collection",
+    "category": "Pacotes",
+    "popularity": 93,
+    "level": "alto",
+    "tags": [
+      "110 mods",
+      "coleção"
+    ],
+    "patterns": [
+      "2020modcollection"
+    ],
+    "source": "https://community.simtropolis.com/files/file/33611-sc13-2020-mod-collection-by-twinzens/",
+    "description": "Coleção histórica de aproximadamente 110 mods, com pacotes e scripts distintos.",
+    "warning": "Não importar como pacote simples: versões após atualização de 2024 podem falhar, e os arquivos possuem destinos específicos.",
+    "install_to": "SimCityData",
+    "complex": true
+  },
+  {
+    "id": "landmarks",
+    "name": "More Landmarks",
+    "category": "Construções",
+    "popularity": 72,
+    "level": "atenção",
+    "tags": [
+      "marcos",
+      "offline"
+    ],
+    "patterns": [
+      "morelandmarks",
+      "more_landmarks"
+    ],
+    "source": "https://community.simtropolis.com/files/file/29424-important-installation-info-more-landmarks-for-your-city-mod-offline-only/",
+    "description": "Amplia limite de monumentos e edifícios de destaque.",
+    "warning": "Pode exigir instalação alternativa em SimCityUserData/Packages com scripts específicos.",
+    "install_to": "SimCityData"
+  }
+]
