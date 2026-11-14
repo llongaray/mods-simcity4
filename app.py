@@ -129,7 +129,7 @@ def is_game_file(filename: str) -> bool:
     return (
         value.startswith(("simcity_game_", "simcity_audio_", "simcitydlcep1_", "simcity-scripts_",
                           "simcitydlcep1-scripts_", "simcity_region_", "simcity_ui_"))
-        or value in {"simcitydata.package", "patch.package"}
+        or value in {"simcitydata.package", "simcitydataep1.package", "simcity_app.package", "simcity_graphics.package", "patch.package"}
     )
 
 def mod_matches(filename: str, entry: dict) -> bool:
@@ -389,6 +389,14 @@ def download_worker(job: str, mod: dict) -> None:
                     magic = f.read(8)
                 if not (magic.startswith((b"DBPF", b"PK\x03\x04", b"Rar!\x1a\x07", b"7z\xbc\xaf\x27\x1c"))):
                     raise ValueError("Fonte exige login, seleção de download ou devolveu HTML.")
+                if magic.startswith(b"DBPF"):
+                    disposition = response.headers.get("Content-Disposition", "")
+                    match = re.search(r'filename="?([^";]+)', disposition, flags=re.IGNORECASE)
+                    original_name = Path(match.group(1).replace("\\", "/")).name if match else ""
+                    package_name = original_name if original_name.lower().endswith(".package") else "000_" + mod["id"] + ".package"
+                    package_file = Path(td) / package_name
+                    temp.rename(package_file)
+                    temp = package_file
                 payloads = packages_from_file(temp)
                 result = install_packages(mod, payloads)
                 update_job(job, status="done", message="Download e instalação concluídos.", result=result)
@@ -441,7 +449,7 @@ def upload(mod_id: str):
         return jsonify(error="Extensão não permitida."), 400
     try:
         with tempfile.TemporaryDirectory() as td:
-            target = Path(td) / ("upload" + Path(file.filename).suffix.casefold())
+            target = Path(td) / Path(file.filename.replace("\\", "/")).name
             file.save(target)
             result = install_packages(mod, packages_from_file(target))
         return jsonify(ok=True, result=result)
