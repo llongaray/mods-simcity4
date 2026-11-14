@@ -93,7 +93,7 @@
          (filter === 'pendente' && !m.installed) || (filter === 'baixo' && m.level === 'baixo'));
     });
     const html = entries.map(m => {
-      const stateLabel = m.installed ? 'Detectado' : 'Não detectado';
+      const stateLabel = m.managed && m.integrity === 'alterado' ? 'Arquivo alterado' : m.managed && m.integrity === 'ausente' ? 'Arquivo ausente' : m.managed && m.integrity === 'verificado' ? 'Validado (SHA-256)' : m.installed ? 'Detectado' : 'Não detectado';
       const level = m.level === 'baixo' ? 'Baixo risco' : m.level === 'alto' ? 'Risco alto' : 'Atenção';
       const riskClass = m.level === 'alto' ? ' risk-high' : m.level === 'baixo' ? ' risk-low' : '';
       const opts = m.managed ?
@@ -109,7 +109,7 @@
       const actions = opts + '<a href="' + esc(m.source) + '" target="_blank" rel="noopener noreferrer" title="Página do autor">↗</a>';
       return '<article class="mod-card">' +
         '<div class="mod-head"><span class="category-tag">' + esc(m.category) + '</span>' +
-        '<span class="status-tag' + (m.installed ? ' installed' : '') + '">' + esc(stateLabel) + '</span></div>' +
+        '<span class="status-tag' + ((m.integrity === 'alterado' || m.integrity === 'ausente') ? ' alert' : m.installed ? ' installed' : '') + '">' + esc(stateLabel) + '</span></div>' +
         '<h3>' + esc(m.name) + '</h3><p class="mod-description">' + esc(m.description) + '</p>' +
         '<div class="mod-meta"><span class="mini-tag' + riskClass + '">' + esc(level) + '</span>' +
         (m.cot ? '<span class="mini-tag">Requer CoT</span>' : '') +
