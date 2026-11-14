@@ -129,7 +129,7 @@ def is_game_file(filename: str) -> bool:
     return (
         value.startswith(("simcity_game_", "simcity_audio_", "simcitydlcep1_", "simcity-scripts_",
                           "simcitydlcep1-scripts_", "simcity_region_", "simcity_ui_"))
-        or value in {"simcitydata.package", "simcitydataep1.package", "simcity_app.package", "simcity_graphics.package", "patch.package"}
+        or value in {"simcitydata.package", "simcitydataep1.package", "simcity_game.package", "simcity_game_data.package", "simcity_app.package", "simcity_graphics.package", "simcity_dlc0.package", "simcity_regionterrain0.package", "simcity_regionterrain1.package", "patch.package"}
     )
 
 def mod_matches(filename: str, entry: dict) -> bool:
